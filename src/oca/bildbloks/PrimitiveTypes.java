@@ -28,31 +28,42 @@ public class PrimitiveTypes {
     double aDoubleDefault;
     char aCharDefault;
 
+    //Excepttions
+    //Overflows
+    /*
+    byte ByteOverflow = 3123456789;
+    int IntOverflow = 3123456789;
+    long LongOverflow = 3123456789;
+    */
+
+
     public void printMinMaxValue(){
+        out.println("Byte---");
         out.println(aByteMin);
         out.println(aByteMax);
-        out.println("---");
+        out.println("Short---");
         out.println(aShortMin);
         out.println(aShortMax);
-        out.println("---");
+        out.println("Int---");
         out.println(aIntMin);
         out.println(aIntMax);
-        out.println("---");
+        out.println("Long---");
         out.println(aLongMin);
         out.println(aLongMax);
-        out.println("---");
+        out.println("Float---");
         out.println(aFloatMin);
         out.println(aFloatMax);
-        out.println("---");
+        out.println("Double---");
         out.println(aDoubleMin);
         out.println(aDoubleMax);
-        out.println("---");
+        out.println("Char---");
         out.println(aCharMin);
         out.println(aCharMax);
     }
 
     public void printDefault(){
         out.println(aBoolDefault);
+        out.println(aByteDefault);
         out.println(aShortDefault);
         out.println(aIntDefault);
         out.println(aLongDefault);
