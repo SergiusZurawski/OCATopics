@@ -60,6 +60,25 @@ public class PrimitiveTypes {
 
 
 
+    public void initializeLocalVarInBranches(boolean check){
+        int initLocal;
+
+        if(check)
+            initLocal = 1;
+        //out.println(initLocal); // Compiler Err; Compiller tracks that check could be false
+
+        if(true)
+            initLocal = 1;
+        out.println(initLocal);  // No error; If always executed.
+
+        int initLocal2;
+        if(check)
+            initLocal2 = 1;
+        else
+            initLocal2 = 2;
+
+        out.println(initLocal);  // No error; All branches covered.
+    }
 
     public void printMinMaxValue(){
         out.println("Byte---");
@@ -104,6 +123,7 @@ public class PrimitiveTypes {
     }
 
     public void defaultValuesForLocalVar(){
+        /**local var doesn't have a default value*/
         boolean aBoolDefaultLocal;
         byte aByteDefaultLocal;
         short aShortDefaultLocal;
@@ -112,7 +132,8 @@ public class PrimitiveTypes {
         float aFloatDefaultLocal;
         double aDoubleDefaultLocal;
         char aCharDefaultLocal;
-//        out.println(aBoolDefaultLocal);
+        /**use without initializaiotn will result in compiler error*/
+//        out.println(aBoolDefaultLocal); // Does not compile
 //        out.println(aByteDefaultLocal);
 //        out.println(aShortDefaultLocal);
 //        out.println(aIntDefaultLocal);
@@ -120,6 +141,5 @@ public class PrimitiveTypes {
 //        out.println(aFloatDefaultLocal);
 //        out.println(aDoubleDefaultLocal);
 //        out.println(aCharDefaultLocal);
-
     }
 }
