@@ -27,6 +27,8 @@ public class PrimitiveTypes {
     float aFloatDefault;   //0.0
     double aDoubleDefault; //0.0
     char aCharDefault;
+    // Refferency types; default always null
+    String aReffDefault;
 
     //Excepttions
     //Overflows
@@ -112,7 +114,8 @@ public class PrimitiveTypes {
         out.println(aLongDefault);
         out.println(aFloatDefault);
         out.println(aDoubleDefault);
-        out.println(aCharDefault);
+        out.println(aCharDefault);  //'\u0000' (NUL)
+        out.println(aReffDefault);
     }
 
     public void printBaseSystems(){
