@@ -19,22 +19,46 @@ public class PrimitiveTypes {
     char aCharMin = '\u0000';               //(or 0)
     char aCharMax = '\uffff';               //(or 65,535 inclusive)
 
-    boolean aBoolDefault;
-    byte aByteDefault;
-    short aShortDefault;
-    int aIntDefault;
-    long aLongDefault;
-    float aFloatDefault;
-    double aDoubleDefault;
+    boolean aBoolDefault;  //false
+    byte aByteDefault;     //0
+    short aShortDefault;   //0
+    int aIntDefault;       //0
+    long aLongDefault;     //0
+    float aFloatDefault;   //0.0
+    double aDoubleDefault; //0.0
     char aCharDefault;
 
     //Excepttions
     //Overflows
+    //By default, Java assumes you are defning an !int! value with a literal
+    // All below considered int
     /*
     byte ByteOverflow = 3123456789;
     int IntOverflow = 3123456789;
     long LongOverflow = 3123456789;
     */
+    //To make it a specifi type, Numeric Literal
+    long appropriateLiteralCapital = 3123456789L;
+    long appropriateLiteralLower   = 3123456789l;
+
+    //Different "Base" Systems
+    //1. Octal (8) 0-7 start with "0"
+    int octal = 017;
+    //2. hexadecimal (0–9 and A–F), prefix number 0x or 0X example, 0xFF
+    int hexadecimal = 0xFF;
+    //3. binary 0-1 , prefix 0b or 0B
+    int binary = 0b11;
+
+    // underscores in number
+    int million1 = 1000000;
+    int million2 = 1_000_000;
+
+    //double notAtStart = _1000.00; // DOES NOT COMPILE; beginning
+    //double notAtEnd = 1000.00_; // DOES NOT COMPILE; end
+    //double notByDecimal = 1000_.00; // DOES NOT COMPILE;  right before a decimal point, or right after a decimal point
+    double annoyingButLegal = 1_00_0.0_0; // this one compiles
+
+
 
 
     public void printMinMaxValue(){
@@ -70,5 +94,12 @@ public class PrimitiveTypes {
         out.println(aFloatDefault);
         out.println(aDoubleDefault);
         out.println(aCharDefault);
+    }
+
+    public void printBaseSystems(){
+        System.out.println(56);     // 56
+        System.out.println(0b11);   // 3
+        System.out.println(017);    // 15
+        System.out.println(0x1F);   // 31
     }
 }
