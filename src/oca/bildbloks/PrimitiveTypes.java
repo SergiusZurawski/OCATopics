@@ -77,7 +77,7 @@ public class PrimitiveTypes {
         else
             initLocal2 = 2;
 
-        out.println(initLocal);  // No error; All branches covered.
+        out.println(initLocal2);  // No error; All branches covered.
     }
 
     public void printMinMaxValue(){
