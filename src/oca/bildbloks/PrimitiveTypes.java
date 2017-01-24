@@ -102,4 +102,24 @@ public class PrimitiveTypes {
         System.out.println(017);    // 15
         System.out.println(0x1F);   // 31
     }
+
+    public void defaultValuesForLocalVar(){
+        boolean aBoolDefaultLocal;
+        byte aByteDefaultLocal;
+        short aShortDefaultLocal;
+        int aIntDefaultLocal;
+        long aLongDefaultLocal;
+        float aFloatDefaultLocal;
+        double aDoubleDefaultLocal;
+        char aCharDefaultLocal;
+//        out.println(aBoolDefaultLocal);
+//        out.println(aByteDefaultLocal);
+//        out.println(aShortDefaultLocal);
+//        out.println(aIntDefaultLocal);
+//        out.println(aLongDefaultLocal);
+//        out.println(aFloatDefaultLocal);
+//        out.println(aDoubleDefaultLocal);
+//        out.println(aCharDefaultLocal);
+
+    }
 }
