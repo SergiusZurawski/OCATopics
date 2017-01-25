@@ -25,9 +25,28 @@ package oca.bildbloks;
     =, +=, -=, *=, /=, %=, &=, ^=, !=, <<=, >>=, >>>= Assignment operators
  */
 
+/**
+    +  Indicates a number is positive, although numbers are assumed to be positive in Java unless accompanied by a negative unary operator
+    - Indicates a literal number is negative or negates an expression
+    ++ Increments a value by 1
+    -- Decrements a value by 1
+    ! Inverts a Boolean’s logical value
+ */
+
 public class Operators {
 
-    //reminder can be applied to a  -x
+    public void orderOfOperation() {
+        //reminder can be applied to a  -x
+
+        //int x = !5; // DOES NOT COMPILE
+        //boolean y = -true; // DOES NOT COMPILE
+        //boolean z = !0; // DOES NOT COMPILE
+
+        int x = 3;
+        int y = ++x * 5 / x-- + --x;
+        System.out.println("x is " + x);
+        System.out.println("y is " + y);
+    }
 
 
 }

@@ -14,9 +14,24 @@ public class NumericPromotion {
         int x = 1;
         long y = 33;
         long z = x * y;
-        //int a = x * y;  //Error
+        //int a = x * y;  //Error promoted to long
 
         double c = 39.21;
         float d = 2.1F;
+        double e = c * d;
+        //float f =  c * d;  //Error promoted to double
+
+        short i = 10;
+        short k = 3;
+//        short m = i * k;   //Error promoted to int
+        int o = i * k;
+
+        short l = 14;
+        float m = 13;
+        double h = 30;
+
+        float s = l * y;  // Promoted to float
+        double r = l * y/h;  // promoted to double
+
     }
 }
