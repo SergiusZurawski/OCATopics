@@ -1,11 +1,19 @@
 package oca.bildbloks;
 
-public class VeriableDeclaration {
+public class VariableDeclaration {
+    /** ■ Local variables—in scope from declaration to end of block
+        ■ Instance variables—in scope from declaration until object garbage collected
+        ■ Class variables—in scope from declaration until program ends*/
     String s1;
     String s2, s3;
     String s4 = "yes", s5 = "no";
     int i1, i2, i3 = 0;
     //int num, String value; // DOES NOT COMPILE
+
+    /**static variables go into scope when declared like the other
+     variables types. However, they stay in scope for the entire life of the program*/
+    static String staticStr;
+
 
     boolean b1, b2;
     String str1 = "1", str2;

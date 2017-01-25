@@ -1,8 +1,7 @@
 package oca.bildbloks;
 
-/**
- * Created by Serg on 9/15/2016.
- */
+/**A file is also allowed to have neither class be public.
+ * As long as there isn’t more than one public class in a fi le, it is okay*/
 public class MultipleClasses {
 
 }
