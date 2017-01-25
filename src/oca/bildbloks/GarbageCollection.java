@@ -61,6 +61,7 @@ public class GarbageCollection {
     private static List objects = new ArrayList();
     protected void finalize1() {
         //Object no longer available for gc.
+        //GC won't call this method second time
         objects.add(this); // Don't do this
     }
 }
