@@ -19,7 +19,6 @@ public class IFStatment {
         if(hourOfDay < 11)
             System.out.println("Good Morning");
             morningGreetingCount++;
-        morningGreetingCount++;
 
         if(hourOfDay < 11) {
             System.out.println("Good Morning");
@@ -34,5 +33,24 @@ public class IFStatment {
         } else {
             System.out.println("Good Evening");
         }
+
+        if(hourOfDay < 15) {
+            System.out.println("Good Afternoon");
+        } else if(hourOfDay < 11) {
+            System.out.println("Good Morning"); // UNREACHABLE CODE
+        } else {
+            System.out.println("Good Evening");
+        }
+
+        int x = 1;
+        //if(x) { // DOES NOT COMPILE
+            // do something
+        //}
+
+        //if(x = 5) { // DOES NOT COMPILE
+            // do something
+        //}
+
     }
+
 }
