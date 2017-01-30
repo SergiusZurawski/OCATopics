@@ -1,8 +1,6 @@
 package oca.bildbloks;
 
-import oca.bildbloks.FlowControl.Contitnue;
-import oca.bildbloks.FlowControl.Switch;
-import oca.bildbloks.FlowControl.While;
+import oca.coreapi.String.StringBuilder;
 
 public class Main {
 
@@ -24,7 +22,11 @@ public class Main {
 
 //        While wh = new While();
 //        wh.loopWithourBraces(-1);
-        Contitnue c = new Contitnue();
-        c.exampleOfContinueInnerLoops();
+
+//        Contitnue c = new Contitnue();
+//        c.exampleOfContinueInnerLoops();
+
+        StringBuilder sb = new StringBuilder();
+        sb.hugeAmountOfStrings();
     }
 }
