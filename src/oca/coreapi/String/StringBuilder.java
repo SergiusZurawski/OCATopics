@@ -41,4 +41,16 @@ public class StringBuilder {
      StringBuilder - default capacity 16
      SB capacity is increased automatically by default.
      */
+
+    /**methods*/
+    /**charAt(), indexOf(), length(), and substring()*/
+
+    public void sbMethods(){
+        java.lang.StringBuilder sb = new java.lang.StringBuilder("animals");
+        String sub = sb.substring(sb.indexOf("a"), sb.indexOf("al"));
+        int len = sb.length();
+        char ch = sb.charAt(6);
+        System.out.println(sub + " " + len + " " + ch);
+
+    }
 }
