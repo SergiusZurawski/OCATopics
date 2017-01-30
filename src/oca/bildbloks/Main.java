@@ -1,5 +1,6 @@
 package oca.bildbloks;
 
+import oca.bildbloks.FlowControl.Contitnue;
 import oca.bildbloks.FlowControl.Switch;
 import oca.bildbloks.FlowControl.While;
 
@@ -21,7 +22,9 @@ public class Main {
 //        }
 //        System.out.println("after");
 
-        While wh = new While();
-        wh.loopWithourBraces(-1);
+//        While wh = new While();
+//        wh.loopWithourBraces(-1);
+        Contitnue c = new Contitnue();
+        c.exampleOfContinueInnerLoops();
     }
 }
