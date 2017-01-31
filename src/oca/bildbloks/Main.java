@@ -1,6 +1,7 @@
 package oca.bildbloks;
 
 import oca.coreapi.Arrays.ArraysExample;
+import oca.coreapi.Arrays.Searching;
 
 public class Main {
 
@@ -29,9 +30,12 @@ public class Main {
 //        StringBuilder sb = new StringBuilder();
 //        sb.hugeAmountOfStrings();
 //        sb.sbMethods();
-        ArraysExample aop = new ArraysExample();
-        aop.printEmptyArrays();
-        aop.arryaEquals();
+//        ArraysExample aop = new ArraysExample();
+//        aop.printEmptyArrays();
+//        aop.arryaEquals();
+
+        Searching searching = new Searching();
+        searching.searchingExample();
 
     }
 }
