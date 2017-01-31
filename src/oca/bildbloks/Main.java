@@ -27,6 +27,7 @@ public class Main {
 //        c.exampleOfContinueInnerLoops();
 
         StringBuilder sb = new StringBuilder();
-        sb.hugeAmountOfStrings();
+//        sb.hugeAmountOfStrings();
+        sb.sbMethods();
     }
 }

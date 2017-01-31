@@ -51,6 +51,55 @@ public class StringBuilder {
         int len = sb.length();
         char ch = sb.charAt(6);
         System.out.println(sub + " " + len + " " + ch);
+    }
+
+    /** StringBuilder append(String str) */
+
+    public void sbAppend(){
+        java.lang.StringBuilder sb = new java.lang.StringBuilder().append(1).append('c');
+        sb.append("-").append(true);
+        System.out.println(sb); // 1c-true
+    }
+
+    /** StringBuilder insert(int offset, String str) */
+
+    public void sbInsert(){
+        java.lang.StringBuilder sb = new java.lang.StringBuilder("animals");
+        sb.insert(7, "-"); // sb = animals-
+        sb.insert(0, "-"); // sb = -animals-
+        sb.insert(4, "-"); // sb = -ani-mals
+        System.out.println(sb);
+    }
+
+    /**
+     StringBuilder delete(int start, int end)
+     StringBuilder deleteCharAt(int index)
+     */
+
+    public void sbDelete(){
+        java.lang.StringBuilder sb = new java.lang.StringBuilder("abcdef");
+                                                                //012345
+        sb.delete(1, 3); // sb = adef
+        sb.deleteCharAt(5); // throws an exception
 
     }
+
+    /** StringBuilder reverse() */
+    public void sbReverse(){
+        java.lang.StringBuilder sb = new java.lang.StringBuilder("ABC");
+        sb.reverse();
+        System.out.println(sb);
+    }
+
+    /** String toString() */
+    public void sbToString(){
+        java.lang.StringBuilder sb = new java.lang.StringBuilder("ABC");
+        String s = sb.toString();
+    }
+
+    /**
+     StringBuilder vs. StringBuffer
+     StringBuilder was added in Java 5.
+     StringBuffer is slower because it is thread safe.
+     */
 }
