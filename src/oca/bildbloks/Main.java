@@ -1,6 +1,6 @@
 package oca.bildbloks;
 
-import oca.coreapi.String.StringBuilder;
+import oca.coreapi.Arrays.ArraysExample;
 
 public class Main {
 
@@ -26,8 +26,12 @@ public class Main {
 //        Contitnue c = new Contitnue();
 //        c.exampleOfContinueInnerLoops();
 
-        StringBuilder sb = new StringBuilder();
+//        StringBuilder sb = new StringBuilder();
 //        sb.hugeAmountOfStrings();
-        sb.sbMethods();
+//        sb.sbMethods();
+        ArraysExample aop = new ArraysExample();
+        aop.printEmptyArrays();
+        aop.arryaEquals();
+
     }
 }
