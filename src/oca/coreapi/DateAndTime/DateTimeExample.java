@@ -15,5 +15,6 @@ public class DateTimeExample {
         System.out.println(LocalDate.now());     //2015-01-20
         System.out.println(LocalTime.now());     //12:45:18.401
         System.out.println(LocalDateTime.now()); //2015-01-20T12:45:18.401
+
     }
 }
