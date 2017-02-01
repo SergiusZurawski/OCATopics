@@ -31,10 +31,10 @@ public class OrderOfInitialization {
     public void CreatingObjects(){};
 
     // Static Method
-    public static void main(String... args) {
-        OrderOfInitialization c = new OrderOfInitialization();
-        System.out.printf("MAIN METHOD\n");
-
-    }
+//    public static void main(String... args) {
+//        OrderOfInitialization c = new OrderOfInitialization();
+//        System.out.printf("MAIN METHOD\n");
+//
+//    }
 
 }

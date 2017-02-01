@@ -144,4 +144,36 @@ public class ArrayListExample {
         two.add(0, "b");                     // [b,a]
         System.out.println(one.equals(two)); // false
     }
+
+    /** Convertion between list and array*/
+    public void convertionFromALtoArray(){
+        List<String> list = new ArrayList<>();
+        list.add("hawk");
+        list.add("robin");
+        Object[] objectArray = list.toArray();
+        System.out.println(objectArray.length); // 2
+        String[] stringArray = list.toArray(new String[0]);
+        System.out.println(stringArray.length); // 2
+    }
+
+    public void convertionFromArrayToList(){
+        String[] array = { "hawk", "robin" };     // [hawk, robin]
+        List<String> list = Arrays.asList(array); // returns fixed size list
+        System.out.println(list.size());          // 2
+        list.set(1, "test");                      // [hawk, test]
+        array[0] = "new";                         // [new, test]
+        for (String b : array) System.out.print(b + " "); // new test
+        list.remove(1);                     // throws UnsupportedOperation Exception
+    }
+
+    /**Sorting*/
+
+    public void arrayListSortingExample(){
+        List<Integer> numbers = new ArrayList<>();
+        numbers.add(99);
+        numbers.add(5);
+        numbers.add(81);
+        Collections.sort(numbers);
+        System.out.println(numbers); //[5, 81, 99]
+    }
 }

@@ -1,5 +1,6 @@
 package oca;
 
+import oca.coreapi.Arrays.ArrayListExample;
 import oca.coreapi.Arrays.ArraysExample;
 import oca.coreapi.Arrays.Searching;
 
@@ -38,8 +39,10 @@ public class Main {
 //        aop.printEmptyArrays();
 //        aop.arryaEquals();
 
-        Searching searching = new Searching();
-        searching.searchingExample();
+//        Searching searching = new Searching();
+//        searching.searchingExample();
+        ArrayListExample ale = new ArrayListExample();
+        ale.convertionFromArrayToList();
 
     }
 }
