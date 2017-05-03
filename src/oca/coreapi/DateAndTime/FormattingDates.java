@@ -1,7 +1,10 @@
 package oca.coreapi.DateAndTime;
+import java.text.SimpleDateFormat;
 import java.time.*;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
+import java.util.Calendar;
+import java.util.Date;
 
 /** DateTimeFormatter
  */
@@ -64,5 +67,38 @@ public class FormattingDates {
     public void ownFormat(){
         DateTimeFormatter f = DateTimeFormatter.ofPattern("MMMM dd, yyyy, hh:mm");
         System.out.println(dateTime.format(f)); // January 20, 2020, 11:12
+    }
+
+    /**  DSL of date time formatter
+        M    - month.
+        M    - 1
+        MM   - 01,
+        MMM  - Jan,
+        MMMM - January
+        d - date in the month
+        d - 1
+        dd - 01
+        , if you want to output a comma
+        y - year
+        yyyy - 2099
+        yy   - 99
+        hh   - 01
+        h    -  1
+        : if you want to output a colon.
+        mm m represents the minute.
+     */
+
+    /**Formatting dates before java8 - is roughly equivalent; it just uses a different class.*/
+
+    public void formatOldApi(){
+        Calendar c = Calendar.getInstance();
+        c.set(2015, 0, 1);
+        Date jan3 = c.getTime();
+        SimpleDateFormat sf = new SimpleDateFormat("hh:mm");
+        sf.format(jan3);
+        // New
+        LocalDateTime dt = LocalDateTime.of(2012, 1, 1, 1, 1);
+        DateTimeFormatter f = DateTimeFormatter.ofPattern("hh:mm");
+        dt.format(f);
     }
 }
