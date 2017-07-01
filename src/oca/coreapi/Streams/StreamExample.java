@@ -96,8 +96,8 @@ public class StreamExample {
     Reader reader;
     int intVal;
 
-    while ((intVal = istream.read()) >= 0) {
-        char charVal = (char) intVal;
-
-    }
+//    while ((intVal = istream.read()) >= 0) {
+//        char charVal = (char) intVal;
+//
+//    }
 }

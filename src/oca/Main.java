@@ -3,6 +3,7 @@ package oca;
 import oca.coreapi.Arrays.ArrayListExample;
 import oca.coreapi.Arrays.ArraysExample;
 import oca.coreapi.Arrays.Searching;
+import oca.coreapi.DateAndTime.ParsingDates;
 
 public class Main {
     /**
@@ -41,8 +42,10 @@ public class Main {
 
 //        Searching searching = new Searching();
 //        searching.searchingExample();
-        ArrayListExample ale = new ArrayListExample();
-        ale.convertionFromArrayToList();
+//        ArrayListExample ale = new ArrayListExample();
+//        ale.convertionFromArrayToList();
+        ParsingDates parsingDates = new ParsingDates();
+        parsingDates.ParseDate();
 
     }
 }
