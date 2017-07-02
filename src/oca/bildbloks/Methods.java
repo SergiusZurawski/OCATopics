@@ -31,6 +31,14 @@ public class Methods {
         private   The method can only be called from within the same class.
         protected The method can only be called from classes in the same package or subclasses.
         Default (Package Private) Access The method can only be called from classes in the same package.
+
+        can access                    | private | default | protected | public |
+        same class                    | yes     | yes     | yes       | yes    |
+        another class same package    | no      | yes     | yes       | yes    |
+        superclass , diff package     | no      | no      | yes       | yes    |
+        not superclass , diff package | no      | no      | no        | yes    |
+
+
     */
 
     public void walk1() {}
@@ -122,4 +130,20 @@ public class Methods {
     public void walk2(int start, int... nums) { }
     //public void walk3(int... nums, int start) { }    // DOES NOT COMPILE
     //public void walk4(int... start, int... nums) { } // DOES NOT COMPILE
+
+    public static void walkLenght(int start, int... nums) {
+        System.out.println(nums.length);
+    }
+
+    public static void walkLenghtDemonstration() {
+        walkLenght(1); //0
+        walkLenght(1, 2); //1
+        walkLenght(1, 2, 3); //2
+        walkLenght(1, new int[] {4, 5}); //2
+        walkLenght(1, null); // NullPointerException
+    }
+
+    public static void accessingVarArgs(int... nums) {
+        System.out.println(nums[1]);
+    }
 }
