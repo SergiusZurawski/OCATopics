@@ -1,9 +1,6 @@
 package oca.bildbloks;
 import java.util.Random;
 
-/**
- * Created by Serg on 1/21/2017.
- */
 //!Fields and instance initializer blocks are run in the order in which they appear in the file.
 //!The constructor runs after all fields and instance initializer blocks have run
 public class OrderOfInitialization {
