@@ -87,7 +87,7 @@ public class Operators {
 
     public void relationalOperators ()
     {
-        /*  applied to numeric primitive data types only
+        /*  applied to numeric Primitive data types only
             If the two numeric operands are not of the same data type, the smaller one is promoted in the manner as previously discussed
 
             <   Strictly less than
@@ -157,7 +157,7 @@ public class Operators {
         “two objects are the same” != “two objects are equivalent.”
         Equality isn't present for numeric and boolean primitives
 
-         1. Comparing two numeric primitive types. If the numeric values are of different data
+         1. Comparing two numeric Primitive types. If the numeric values are of different data
              types, the values are automatically promoted as previously described. For example,
              5 == 5.00 returns true since the left side is promoted to a double.
          2. Comparing two boolean values.

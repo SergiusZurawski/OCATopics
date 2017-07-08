@@ -4,7 +4,7 @@ package oca.bildbloks;
  * key differences between primitives and reference Types
  * 1.
  * reference types can be assigned null,  they do not currently refer to an object
- * primitive types compiler error if assign  null
+ * Primitive types compiler error if assign  null
  * 2.
  * reference types - can call methods if not null
  * 3.
