@@ -84,7 +84,7 @@ public class Methods {
         String start = "AniMaL ";
         String trimmed = start.trim(); // "AniMaL"
         String lowercase = trimmed.toLowerCase(); // "animal"
-        String result = lowercase.replace('a', 'A'); // "Animal"
+        String result = lowercase.replace('a', 'A'); // "Mammal"
         System.out.println(result);
         result = "AniMaL ".trim().toLowerCase().replace('a', 'A');
         System.out.println(result);
