@@ -66,18 +66,19 @@ class OrderOfCall {
      Varargs                public String glide(int... nums) {}
      */
 
-    public void flyPriority(int i) {System.out.print("int ");}
-    public void flyPriority(long i) {System.out.print("long ");}
-    public void flyPriority(Integer i) {System.out.print("Integer ");}
-    public void flyPriority(Long i) {System.out.print("Long ");}
-    public void flyPriority(int ... i) {System.out.print("Varargs int ");}
+    public void flyPriority(int i)      {System.out.print("int ");}
+    public void flyPriority(long i)     {System.out.print("long ");}
+    public void flyPriority(Integer i)  {System.out.print("Integer ");}
+    public void flyPriority(Long i)     {System.out.print("Long ");}
+    public void flyPriority(int ... i)  {System.out.print("Varargs int ");}
+
     public static void callExample() {
         OrderOfCall co = new OrderOfCall();
         // first priority is:
         //                     direct match, output "int"
         //                     Larger primitive type "long'
         //                     Autoboxed Integer "Integer'
-        //                     Autoboxed Integer "Integer'
+        //                     Varargs "Varargs'
         int var = 1;
         co.flyPriority(var);
     }
