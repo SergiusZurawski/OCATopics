@@ -66,6 +66,7 @@ class OrderOfCallPrimitive {
      Varargs                public String glide(int... nums) {}
      */
 
+    public void flyPriority(short i)    {System.out.print("short ");}
     public void flyPriority(int i)      {System.out.print("int ");}
     public void flyPriority(long i)     {System.out.print("long ");}
     public void flyPriority(Integer i)  {System.out.print("Integer ");}
@@ -81,25 +82,27 @@ class OrderOfCallPrimitive {
         //                     Autoboxed Integer "Integer'
         //                     Varargs "Varargs'
         int var = 1;
-//        Integer var = 1;
-        co.flyPriority(var);
+        co.flyPriority(var); // int
+        byte var2 = 1;
+        co.flyPriority(var2); // int
     }
 
 }
 
-class OrderOfCallAutoboxed {
+class OrderOfCallAutoboxedReversed {
     // Object has priority over Bigger Type and primitive type
     public void flyPriority(int i)          {System.out.print("int ");}
     public void flyPriority(Object o)       {System.out.print("Object ");}
     public void flyPriority(int ... i)      {System.out.print("Varargs int ");}
     public void flyPriority(Integer ... i)  {System.out.print("Varargs Integer ");}
 //    public void flyPriority(Integer i)    {System.out.print("Integer ");}
+    public void flyPriority(Long i)         {System.out.print("Long ");}
 
     public static void callExample() {
-        OrderOfCallAutoboxed co = new OrderOfCallAutoboxed();
+        OrderOfCallAutoboxedReversed co = new OrderOfCallAutoboxedReversed();
 
         Integer var = 1;
-        co.flyPriority(var);
+        co.flyPriority(new Integer(1));
     }
 
 }
@@ -142,8 +145,7 @@ class OrderOfCallLongerPrimitive {
 
     public static void callExample() {
         OrderOfCallLongerPrimitive co = new OrderOfCallLongerPrimitive();
-        int var = 1;
-        co.flyPriority(var); //float
+        co.flyPriority(1); //float
     }
 
 }
@@ -176,13 +178,13 @@ class OrderOfCallPrimitiveClassesConvrsionToBigger {
      * Autoboxed type         public String glide(Integer i, Integer j) {}
      * Varargs                public String glide(int... nums) {}
      */
-    public void flyPriority(Integer i)  {System.out.print("Integer ");}
+//    public void flyPriority(Integer i)  {System.out.print("Integer ");}
     public void flyPriority(Long i)     {System.out.print("Long ");}
     public void flyPriority(int... i)   {System.out.print("Varargs int ");}
 
 
     public static void callExample() {
-        OrderOfCallPrimitiveClasses co = new OrderOfCallPrimitiveClasses();
+        OrderOfCallPrimitiveClassesConvrsionToBigger co = new OrderOfCallPrimitiveClassesConvrsionToBigger();
         int var = 1;
         co.flyPriority(var); //Integer
     }
