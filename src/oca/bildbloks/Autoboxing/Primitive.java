@@ -31,7 +31,7 @@ class Refference {
     }
 }
 
-class OrderOfCall {
+class OrderOfCallPrimitive {
     public void fly(int i) {
         System.out.print("int ");
     }
@@ -70,17 +70,36 @@ class OrderOfCall {
     public void flyPriority(long i)     {System.out.print("long ");}
     public void flyPriority(Integer i)  {System.out.print("Integer ");}
     public void flyPriority(Long i)     {System.out.print("Long ");}
+    public void flyPriority(Object i)   {System.out.print("Object ");}
     public void flyPriority(int ... i)  {System.out.print("Varargs int ");}
 
     public static void callExample() {
-        OrderOfCall co = new OrderOfCall();
+        OrderOfCallPrimitive co = new OrderOfCallPrimitive();
         // first priority is:
         //                     direct match, output "int"
         //                     Larger primitive type "long'
         //                     Autoboxed Integer "Integer'
         //                     Varargs "Varargs'
         int var = 1;
-        co.flyPriority(var); //int
+//        Integer var = 1;
+        co.flyPriority(var);
+    }
+
+}
+
+class OrderOfCallAutoboxed {
+    // Object has priority over Bigger Type and primitive type
+    public void flyPriority(int i)          {System.out.print("int ");}
+    public void flyPriority(Object o)       {System.out.print("Object ");}
+    public void flyPriority(int ... i)      {System.out.print("Varargs int ");}
+    public void flyPriority(Integer ... i)  {System.out.print("Varargs Integer ");}
+//    public void flyPriority(Integer i)    {System.out.print("Integer ");}
+
+    public static void callExample() {
+        OrderOfCallAutoboxed co = new OrderOfCallAutoboxed();
+
+        Integer var = 1;
+        co.flyPriority(var);
     }
 
 }
