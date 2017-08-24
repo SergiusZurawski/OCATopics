@@ -2,7 +2,7 @@ package oca.bildbloks;
 import static java.lang.System.*;
 
 
-/**
+/** http://cs.fit.edu/~ryan/java/language/java-data.html
  Type	    Description	                Default	    Size	    Example Literals
  boolean	true or false	            false	    1 bit	    true, false
  char	    Unicode character	        \u0000	    16 bits	    'a', '\u0041', '\101', '\\', '\'', '\n', 'ß'
@@ -146,5 +146,59 @@ public class PrimitiveTypes {
 //        out.println(aFloatDefaultLocal);
 //        out.println(aDoubleDefaultLocal);
 //        out.println(aCharDefaultLocal);
+    }
+
+    public static void widenings(){
+        /**
+         from
+         to		byte	short	char	int	    long	float	double
+         byte   [id]
+         short	 +      [id]
+         char	 -       -      [id]
+         int	 + 	     +	 	 +      [id]
+         long		 	 	 	 	            [id]
+         float		 	 	 	 	 	                [id]
+         double		 	 	 	 	 	 	                    [id]
+
+         */
+        byte aByte = 127;
+        /** to Short */
+        short aShort = aByte;
+        /** to Char */
+        char aChar;
+        aChar = 123;
+        aChar = 'C';
+        //aChar = aByte;  //Exception
+        //aChar = aShort; //Exception
+        /** to Int */
+        int aInt;
+        aInt = aByte;
+        aInt = aShort;
+        aInt = aChar;
+        /** to Long */
+        long aLong;
+        aLong = aByte;
+        aLong = aShort;
+        aLong = aChar;
+        aLong = aInt;
+        /** to float */
+        float aFloat;
+        aFloat = aByte;
+        aFloat = aShort;
+        aFloat = aChar;
+        aFloat = aInt;
+        aFloat = aLong;
+        /** to Dobule */
+        double aDouble;
+        aDouble = aByte;
+        aDouble = aShort;
+        aDouble = aChar;
+        aDouble = aInt;
+        aDouble = aLong;
+        aDouble = aFloat;
+    }
+
+    public static void narrwings(){
+
     }
 }
