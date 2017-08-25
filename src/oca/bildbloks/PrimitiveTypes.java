@@ -152,13 +152,22 @@ public class PrimitiveTypes {
         /**
          from
          to		byte	short	char	int	    long	float	double
-         byte   [id]
-         short	 +      [id]
-         char	 -       -      [id]
-         int	 + 	     +	 	 +      [id]
-         long		 	 	 	 	            [id]
-         float		 	 	 	 	 	                [id]
-         double		 	 	 	 	 	 	                    [id]
+         byte   [id] |    -   |
+         short	 +   |  [id]  |
+         char	 -   |    -   | [id] |
+         int	 + 	 |    +	  |	 +   |  [id]
+         long	 +   |	  +	  |  +   |    +   | [id]
+         float	 +   |	  +	  |  +   |    +   |   +   |  [id]
+         double	 +   |	  +	  |  +   |    +   |   +   |   +    | [id]
+
+
+
+                byte( -128 .. 127)  short(-32,768 .. 32,767)  char(\u0000 .. \uFFFF)
+         short	-128..127*	        [id]	 	 	 	      --
+         int	-128..127*	        -32,768 .. 32,767*	      0 .. 65,535+	            [id]
+         long	-128 .. 127*	    -32,768 .. 32,767*	      0 .. 65,535+	             -1	    [id]
+         float	-128.0 .. 127.0	    -32,768.0 .. 32,767.0	  0.0 .. 65,535.0	        -1.0p	-1.0p	[id]
+         double	-128.0 .. 127.0	    -32,768.0 .. 32,767.0	  0.0 .. 65,535.0	        -1.0	-1.0p	1.2
 
          */
         byte aByte = 127;

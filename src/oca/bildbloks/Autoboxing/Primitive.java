@@ -131,10 +131,6 @@ class OrderOfCallLongerType {
 
 class OrderOfCallLongerPrimitive {
     /** float and double has priority over Autoboxed types;
-     Exact match by type    public String glide(int i, int j) {}
-     Larger primitive type  public String glide(long i, long j) {}
-     Autoboxed type         public String glide(Integer i, Integer j) {}
-     Varargs                public String glide(int... nums) {}
      */
     public void flyPriority(double i)   {System.out.print("double ");}
     public void flyPriority(float i)    {System.out.print("float ");}
@@ -151,13 +147,7 @@ class OrderOfCallLongerPrimitive {
 }
 
 class OrderOfCallPrimitiveClasses {
-    /**
-     * Converted to primitive type;
-     * Exact match by type    public String glide(int i, int j) {}
-     * Larger primitive type  public String glide(long i, long j) {}
-     * Autoboxed type         public String glide(Integer i, Integer j) {}
-     * Varargs                public String glide(int... nums) {}
-     */
+
     public void flyPriority(Integer i)  {System.out.print("Integer ");}
     public void flyPriority(Long i)     {System.out.print("Long ");}
     public void flyPriority(int... i)   {System.out.print("Varargs int ");}
@@ -171,13 +161,6 @@ class OrderOfCallPrimitiveClasses {
 }
 
 class OrderOfCallPrimitiveClassesConvrsionToBigger {
-    /**
-     * float and double has priority over Autoboxed types;
-     * Exact match by type    public String glide(int i, int j) {}
-     * Larger primitive type  public String glide(long i, long j) {}
-     * Autoboxed type         public String glide(Integer i, Integer j) {}
-     * Varargs                public String glide(int... nums) {}
-     */
 //    public void flyPriority(Integer i)  {System.out.print("Integer ");}
     public void flyPriority(Long i)     {System.out.print("Long ");}
     public void flyPriority(int... i)   {System.out.print("Varargs int ");}
